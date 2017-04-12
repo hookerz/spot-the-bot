@@ -1,0 +1,46 @@
+{
+  "name": "spot-the-bot",
+  "version": "1.0.0",
+  "description": "A cooperative WebVR game by Hook Studios",
+  "main": "index.js",
+  "scripts": {
+    "serve": "browser-sync start --server out --files out --no-ghost-mode --no-notify --no-open",
+    "clean": "shx rm -rf out gae/static",
+    "mkdir": "shx mkdir out",
+    "watch": "npm-run-all clean mkdir --parallel watch:*",
+    "watch:copy": "cpx \"static/**/*\" out --watch",
+    "watch:styl": "node build-stylus.js --watch",
+    "watch:main": "node build-rollup.js --watch",
+    "build": "npm-run-all clean mkdir build:*",
+    "build:copy": "cpx \"static/**/*\" out",
+    "build:styl": "node build-stylus.js",
+    "build:main": "node build-rollup.js",
+    "prod": "npm-run-all clean mkdir prod:*",
+    "prod:copy": "cpx \"static/**/*\" out",
+    "prod:indx": "shx mv \"out/index.prod.html\" \"out/index.html\"",
+    "prod:styl": "node build-stylus.js --prod",
+    "prod:main": "node build-rollup.js --prod",
+    "gae": "npm-run-all prod gae:*",
+    "gae:static": "cpx \"out/**/*\" gae/static"
+  },
+  "dependencies": {
+    "debug": "^2.6.0",
+    "three": "^0.84.0",
+    "vue": "^2.2.1",
+    "vuex": "^2.1.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.7",
+    "cpx": "^1.5.0",
+    "npm-run-all": "^4.0.1",
+    "rollup": "^0.41.4",
+    "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-replace": "^1.1.1",
+    "rollup-plugin-string": "^2.0.2",
+    "rollup-plugin-vue": "^2.2.20",
+    "shx": "^0.2.2",
+    "stylus": "^0.54.5",
+    "yargs": "^6.6.0"
+  }
+}

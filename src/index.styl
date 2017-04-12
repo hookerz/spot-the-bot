@@ -1,0 +1,28 @@
+@import 'ui/fonts.styl'
+
+html
+body
+
+  height 100%
+
+  color white
+  font-size 16px
+  font-family 'Program', sans-serif
+  letter-spacing 1px
+
+*
+
+  margin 0
+  padding 0
+  box-sizing border-box
+
+canvas
+
+  position absolute
+  top 0; bottom 0; left 0; right 0;
+
+// The order here matters; colors.styl has variables that others
+@require 'ui/colors.styl'
+@require 'ui/buttons.styl'
+@require 'ui/misc.styl'
+@require 'ui/**/*.styl'

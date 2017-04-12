@@ -1,0 +1,139 @@
+.game-helper-running
+
+  position absolute
+  top 0; left 0; right 0; bottom 0;
+
+  padding 20px
+
+  display flex
+  align-items center
+  justify-content space-between
+  flex-direction column
+
+  @media all and (min-width 480px)
+
+    padding 20px
+
+    align-items flex-end
+    justify-content center
+    flex-direction row
+
+.game-helper-info
+.game-helper-actions
+
+  flex-grow 0
+
+  display flex
+  align-items center
+  justify-content center
+
+.game-helper-info
+
+  background-color white
+  border-radius $button-border-radius
+
+  @media all and (min-width 480px)
+
+    margin-left 10px
+    margin-right 10px
+
+.game-helper-pass
+.game-helper-clock
+.game-helper-score
+
+  position relative
+
+  display flex
+  align-items center
+  justify-content center
+  flex-direction column
+
+  font-family 'Channel', sans-serif
+  font-weight bold
+  text-align center
+  text-transform uppercase
+
+.game-helper-clock
+.game-helper-score
+
+  color $color-button-blue
+
+  width 80px
+  height 60px
+
+  .game-helper-label
+
+    font-size 0.75rem
+    margin-bottom 0.25rem
+
+  .game-helper-value
+
+    font-size 1.5rem
+
+  @media all and (min-width 480px)
+
+    width 100px
+    height 80px
+
+    .game-helper-label
+
+      font-size 0.75rem
+      margin-bottom 0.5rem
+
+    .game-helper-value
+
+      font-size 2rem
+
+.game-helper-pass
+
+  position relative // position the recovery bars by the parent buttons
+
+  width 100px
+  height 60px
+
+  margin-top 0
+  margin-bottom $button-shadow-height
+
+  i
+
+    font-size 1.5rem
+    margin-bottom 5px
+
+  @media all and (min-width 480px)
+
+    width 100px
+    height 80px
+
+    margin-left 10px
+    margin-right 10px
+
+    i
+
+      font-size 2rem
+
+  &.disabled
+
+    transform translateY($button-shadow-height)
+
+    background $color-action-disabled-dark !important
+    box-shadow none !important
+
+    *
+
+      z-index 10
+
+    .game-helper-recovery
+
+      display block
+      z-index 0
+
+.game-helper-recovery
+
+  display none
+
+  position absolute
+  top 0; left 0; right 0; bottom 0;
+
+  background $color-action-disabled
+  border-bottom-left-radius $button-border-radius
+  border-bottom-right-radius $button-border-radius

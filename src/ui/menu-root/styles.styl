@@ -1,0 +1,46 @@
+.menu-root
+
+  display flex
+  align-items center
+  justify-content center
+  flex-direction column
+
+.menu-slides
+.menu-notifications
+
+  position relative // the transitions use aboslute positioning to overlap
+
+  display flex
+  align-items center
+  justify-content center
+
+  width 90vw
+  min-width 300px
+  max-width 420px
+
+  @media all and (min-width 480px)
+
+    max-width 480px
+
+  .menu-slide
+  .menu-notification
+
+    width 100%
+
+  .ui-infobox
+  .ui-button-group
+
+    width 100%
+
+.menu-notifications
+
+  .menu-notification
+
+    position absolute
+    top 0; left 0;
+
+    margin-top 5px
+
+    @media all and (min-width 480px)
+
+      margin-top 10px

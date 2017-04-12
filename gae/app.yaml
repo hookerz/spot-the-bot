@@ -1,0 +1,94 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /(.*\.css)
+  mime_type: text/css
+  static_files: static/\1
+  upload: static/(.*\.css)
+  secure: always
+
+- url: /(.*\.html)
+  mime_type: text/html
+  static_files: static/\1
+  upload: static/(.*\.html)
+  secure: always
+
+- url: /(.*\.js)
+  mime_type: text/javascript
+  static_files: static/\1
+  upload: static/(.*\.js)
+  secure: always
+
+- url: /(.*\.txt)
+  mime_type: text/plain
+  static_files: static/\1
+  upload: static/(.*\.txt)
+  secure: always
+
+- url: /(.*\.xml)
+  mime_type: application/xml
+  static_files: static/\1
+  upload: static/(.*\.xml)
+  secure: always
+
+- url: /(.*\.json)
+  mime_type: application/json
+  static_files: static/\1
+  upload: static/(.*\.json)
+  secure: always
+
+- url: /(.*\.obj)
+  mime_type: text/plain
+  static_files: static/\1
+  upload: static/(.*\.obj)
+  secure: always
+
+# woff files
+- url: /(.*\.woff)
+  static_files: static/\1
+  upload: static/(.*\.woff)
+  secure: always
+
+# woff files
+- url: /(.*\.woff2)
+  static_files: static/\1
+  upload: static/(.*\.woff2)
+  secure: always
+
+# mp3 files
+- url: /(.*\.mp3)
+  static_files: static/\1
+  upload: static/(.*\.mp3)
+  secure: always
+
+# ogg files
+- url: /(.*\.ogg)
+  static_files: static/\1
+  upload: static/(.*\.ogg)
+  secure: always
+
+# image files
+- url: /(.*\.(bmp|gif|ico|jpeg|jpg|png))
+  static_files: static/\1
+  upload: static/(.*\.(bmp|gif|ico|jpeg|jpg|png))
+  secure: always
+
+# index files
+- url: /(.+)/
+  static_files: static/\1/index.html
+  upload: static/(.+)/index.html
+  secure: always
+
+# redirect to 'url + /index.html' url.
+- url: /(.+)
+  static_files: static/redirector.html
+  upload: static/redirector.html
+  secure: always
+
+# site root
+- url: /
+  static_files: static/index.html
+  upload: static/index.html
+  secure: always

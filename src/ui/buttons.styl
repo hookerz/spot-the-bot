@@ -1,0 +1,106 @@
+$button-hover-height  = 3px
+$button-shadow-height = 5px
+$button-border-radius = 5px
+
+.ui-button-group
+
+  display flex
+  align-items center
+  justify-content center
+  flex-direction row
+
+  > *
+
+    margin-left 5px
+    margin-right 5px
+
+    @media all and (min-width 480px) and (min-height 480px)
+
+      margin-left 10px
+      margin-right 10px
+
+    &:first-child
+
+      margin-left 0
+
+    &:last-child
+
+      margin-right 0
+
+.ui-button
+
+  display flex
+  align-items center
+  justify-content center
+  flex-direction row
+
+  flex 1 1 content
+
+  padding 10px 20px
+  margin-top 5px
+  margin-bottom 5px + $button-shadow-height
+
+  color $color-bg
+  font-size 1rem
+  font-weight bold
+  text-align center
+  white-space pre
+
+  cursor pointer
+  user-select none
+  pointer-events all !important
+
+  border none
+  border-radius $button-border-radius
+  background-color $color-button
+  box-shadow 0 $button-shadow-height 0 0 $color-button-shadow
+
+  @media all and (min-width 480px) and (min-height 480px)
+
+    padding 20px 30px
+    margin-top 10px
+    margin-bottom 10px + $button-shadow-height
+    transition: all 0.1s ease-out
+
+  &.disabled
+
+    color white !important
+
+    cursor default
+    user-select none
+
+    background-color $color-action-disabled !important
+    box-shadow 0 $button-shadow-height 0 0 $color-action-disabled-dark !important
+
+  &:hover:not(.disabled)
+
+      transform translateY(0 - $button-hover-height)
+      box-shadow 0 ($button-shadow-height + $button-hover-height) 0 0 $color-button-shadow
+
+  &.ui-blue
+
+    color white
+
+    background-color $color-button-blue
+    box-shadow 0 $button-shadow-height 0 0 $color-button-blue-shadow
+
+    &:hover
+
+      box-shadow 0 ($button-shadow-height + $button-hover-height) 0 0 $color-button-blue-shadow
+      transition all 0.1s ease-out
+
+  &.ui-red
+
+    color white
+
+    background-color $color-button-red
+    box-shadow 0 $button-shadow-height 0 0 $color-button-red-shadow
+
+    &:hover
+
+      box-shadow 0 ($button-shadow-height + $button-hover-height) 0 0 $color-button-red-shadow
+      transition all 0.1s ease-out
+
+  &.ui-back
+
+    flex 0

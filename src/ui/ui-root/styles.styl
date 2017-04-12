@@ -1,0 +1,53 @@
+.ui-root
+
+  width 100%
+  min-height 100%
+  overflow-x hidden
+
+  position relative
+
+  display flex
+  align-items center
+  justify-content center
+  flex-direction column
+
+  pointer-events none
+
+  @media all and (orientation: landscape)
+
+    height 100%
+    overflow hidden
+
+  > *
+
+    flex-shrink 0
+
+    z-index 0
+
+  .clickable
+  .clickable *
+
+    pointer-events all !important
+    cursor pointer
+
+.ui-top-actions
+.ui-bottom-actions
+
+  width 100%
+
+  padding 15px
+
+  display flex
+  justify-content space-between
+
+.ui-top-actions
+
+  z-index 10 // fix ui-about modal indexing
+
+  margin-bottom auto
+  align-items flex-start
+
+.ui-bottom-actions
+
+  margin-top auto
+  align-items flex-end

@@ -1,0 +1,21 @@
+.webgl-check
+
+  position absolute
+  top 0; left 0; right 0; bottom 0;
+
+  background linear-gradient(to bottom, $color-bg-top 0%, $color-bg-bottom 100%)
+
+  display flex
+  align-items center
+  justify-content center
+  flex-direction column
+
+  .ui-infobox
+
+    width 90vw
+    min-width 300px
+    max-width 420px
+
+    @media all and (min-height 480px)
+
+      max-width 480px

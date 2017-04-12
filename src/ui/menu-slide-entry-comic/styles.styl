@@ -1,0 +1,51 @@
+.menu-slide-entry-comic
+
+  position relative
+
+.menu-slide-entry-img
+
+  width 300px
+
+  @media all and (min-width 480px)
+
+    width 400px
+
+  @media all and (min-width 520px)
+
+    width 520px
+
+.menu-slide-entry-bots
+
+  position absolute
+
+  top -8px; left 213px;
+
+  width 80px
+  height @width
+
+  clip rect(9px, 80px, 72px, 0) // (top, right, bottom, left) offset
+
+  @media all and (min-width 480px)
+
+    top -6px; left 287px;
+
+    width 100px
+    height @width
+
+    clip rect(7px, 100px, 91px, 0) // (top, right, bottom, left) offset
+
+  @media all and (min-width 520px)
+
+    top -12px; left 369px;
+
+    width 135px
+    height @width
+
+    clip rect(13px, 135px, 123px, 0) // (top, right, bottom, left) offset
+
+.menu-slide-entry-bot
+
+  position absolute
+  top 0; left 0;
+
+  width 100%

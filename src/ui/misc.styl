@@ -1,0 +1,55 @@
+.ui-infobox
+
+  display flex
+  align-items center
+  justify-content center
+  flex-direction column
+
+  margin 5px 0
+  padding 20px
+
+  border-radius $button-border-radius
+  background-color $color-infobox
+
+  @media all and (min-width 480px) and (min-height 480px)
+
+    margin 10px 0
+
+  p, li
+
+    color $color-infobox-text
+    font-size 1.25rem
+
+    margin-bottom 10px
+
+    &:last-child
+
+      margin-bottom 0
+
+    @media all and (min-width 480px) and (min-height 480px)
+
+      margin-bottom 20px
+
+  p
+
+    text-align center
+
+  li
+
+    margin-left 20px
+    text-align left
+
+  a, a:visited, a:hover
+
+    color white
+
+  &.ui-error
+
+    background-color $color-infobox-error
+
+.ui-infobox-header
+
+  color $color-infobox-header
+  font-family 'Channel', sans-serif
+  font-size 1.25rem
+  text-align center

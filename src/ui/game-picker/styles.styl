@@ -1,0 +1,79 @@
+.game-picker
+
+  display flex
+  align-items center
+  justify-content center
+  flex-direction column
+
+  width 90vw
+  min-width 300px
+  max-width 420px
+
+  position relative // the transitions use aboslute positioning to overlap
+
+  pointer-events none
+
+  @media all and (min-height 480px)
+
+    max-width 480px
+
+  > .ui-infobox
+
+    width 100%
+
+  *
+
+    z-index 10
+
+.game-picker-room-code
+
+  color white !important
+  font-size 3rem !important
+  font-family 'Channel', sans-serif
+
+  @media all and (min-height 480px)
+
+    font-size 5rem !important
+
+.game-picker-buttons
+
+  display flex
+  align-items center
+  justify-content center
+  flex-direction row
+
+  .ui-button
+
+    margin-left 5px
+    margin-right 5px
+
+    @media all and (min-width 480px) and (min-height 480px)
+
+      margin-left 10px
+      margin-right 10px
+
+.game-vr-button-enter
+.game-vr-button-exit
+.game-vr-button-na
+
+  display flex
+  align-items center
+  justify-content flex-start
+  flex-direction row
+
+  svg
+
+    fill white
+
+    height 1.5rem
+    margin-top -1rem
+    margin-bottom -1rem
+    padding-right 10px
+
+    @media all and (min-width 480px) and (min-height 480px)
+
+      height 2rem
+
+  p
+
+    flex 1
