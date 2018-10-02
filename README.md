@@ -5,6 +5,9 @@ Try the game [here](https://spot-the-bot.com)
 
 Checkout other WebVR experiments [here](https://webvrexperiments.com)
 
+#### Update
+As of 9/11/2018, the WebVR API is no longer supported so some features may not work as intended.
+
 ##### Building Locally
 
 All of the build scripts are run through `npm`. Here are some common tasks:
